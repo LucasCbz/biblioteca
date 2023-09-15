@@ -6,7 +6,7 @@
     <div class="container">
       <div class="login">
         <h1>Bem-vindo ao Login</h1>
-        <form>
+        <form action="validacao.php" method="POST">
           <input type="text" name="nome" id="nome" placeholder="Nome:">
           <input type="password" name="senha" id="senha" placeholder="Senha:">
           <input type="button" value="Entrar">
