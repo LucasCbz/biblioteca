@@ -1,3 +1,6 @@
+<?php
+include_once "../generic/Autoload.php";
+?>
 <html>
   <head>
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -9,6 +12,7 @@
         <form action="validacao.php" method="POST">
           <input type="text" name="nome" id="nome" placeholder="Nome:">
           <input type="password" name="senha" id="senha" placeholder="Senha:">
+          <input type="email" name="email" id="email" placeholder="Email: ">
           <input type="button" value="Entrar">
           <a class="opc-cadastro">Não tem uma conta? <a href="cadastro.php">Cadastrar-se</a></a>
         </form>
