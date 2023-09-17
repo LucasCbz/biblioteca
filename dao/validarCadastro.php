@@ -6,7 +6,7 @@ session_start();
 $nome = $_POST['nome'];
 $senha = $_POST['senha'];
 $email = $_POST['email'];
-$con =new conexao();
+
 
 $sql="select * from usuarios where nome= '$nome' ";
 $res = $con->executar($sql);
