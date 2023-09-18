@@ -6,17 +6,17 @@ session_start();
 $nome = $_POST['nome'];
 $senha = $_POST['senha'];
 $email = $_POST['email'];
-
+// $conexao= new ConnectionBD();
 
 $sql="select * from usuarios where nome= '$nome' ";
-$res = $con->executar($sql);
+$res = $bd->query($sql);
 $acao = $_GET["acao"];
     if(sizeof($res)>0){
-        header("location: cadastro.php");
+        header("location: cadastro.php?&erro=1");
     }else{
         $sql="insert into usuarios (nome,email,senha) values ('$nome','$email','$senha')";
-        $conexao= new conexao();
-        $conexao->executar($sql);
+        // $conexao= new ConnectionBD();
+        $bd->query($sql);
         header("location: login.php");
 
     }
