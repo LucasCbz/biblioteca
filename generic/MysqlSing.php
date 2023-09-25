@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace generic;
 
@@ -32,21 +32,29 @@ class MysqlSing
         return self::$dataBaseSing;
     }
 
-
-
-    public function query($sql, $param = array())
+    public function prepare($sql)
     {
         if ($this->conexaoPDO != null) {
-            $sth = $this->conexaoPDO->prepare($sql);
-            foreach ($param as $key => &$value) {
-                $sth->bindParam($key, $value,PDO::PARAM_STR);
-            }
-           
-           
-            $sth->execute();
-            return $sth->fetchAll(PDO::FETCH_ASSOC);
+            return $this->conexaoPDO->prepare($sql);
         }
-
         return null;
     }
+
+    public function query($sql, $param = array())
+{
+    if ($this->conexaoPDO != null) {
+        $sth = $this->conexaoPDO->prepare($sql);
+        foreach ($param as $key => &$value) {
+            // Use :nome como o nome do parâmetro
+            $sth->bindParam(":$key", $value, PDO::PARAM_STR);
+        }
+
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    return null;
 }
+    
+}
+?>

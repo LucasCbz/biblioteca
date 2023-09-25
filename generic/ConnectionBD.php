@@ -1,5 +1,7 @@
 <?
 namespace generic;
+use generic\MysqlSing;
+
 class ConnectionBD{
     public $bd;
 

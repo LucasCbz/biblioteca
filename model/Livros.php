@@ -7,7 +7,7 @@
         private $id;
         private $nome;
 
-        public function _construct(){}      
+        public function __construct(){}      
         
 
         public function setId($id) {

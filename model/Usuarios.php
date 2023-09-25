@@ -9,7 +9,7 @@
         private $email;
         private $senha;
 
-        public function _construct(){}
+        public function __construct(){}
 
         public function setId($id) {
             $this->id = $id;

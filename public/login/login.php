@@ -1,5 +1,5 @@
 <?php
-  include_once "/biblioteca1/generic/Autoload.php";
+ include_once "/generic/autoload.php";
 ?>
 
 <html>
@@ -10,7 +10,7 @@
     <div class="container">
       <div class="login">
         <h1>Bem-vindo ao Login</h1>
-        <form method="post" action="/biblioteca1/services/controller/UsuariosServ.php">
+        <form method="post" action="../../services/controller/UsuariosServ.php">
           <input type="text" name="nome" id="nome" placeholder="Nome:">
           <input type="password" name="senha" id="senha" placeholder="Senha:">
           <input type="email" name="email" id="email" placeholder="Email: ">

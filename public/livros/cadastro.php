@@ -1,5 +1,5 @@
 <?php
-  include_once "/biblioteca1/generic/Autoload.php";
+  include_once "/generic/autoload.php";
 ?>
 
 <html>
@@ -10,7 +10,7 @@
     <div class="container">
       <div class="cadastro">
         <h1>Bem-vindo ao cadastro de livros</h1>
-        <form method="post" action="/biblioteca1/dao/LivrosDAO.php">
+        <form method="post" action="../../services/controller/livrosServ.php">
           <input type="text" name="nomeLivro" id="nomeLivro" placeholder="Nome:">
           <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade:">
           <input type="text" name="genero" id="genero" placeholder="Gênero:">

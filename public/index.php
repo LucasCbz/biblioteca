@@ -1,5 +1,5 @@
 <?
-  include_once "../generic/Autoload.php"; 
+  include_once "/biblioteca1/generic/autoload.php"; 
 ?>
 
 <html>
@@ -11,7 +11,7 @@
       <div class="inicio">
         <h1>Bem-vindo a Biblioteca pública</h1>
         <a href="./login/login.php">Log-in</a>
-        <a href="#">Sign-in</a>
+        <a href="./login/cadastro.php">Sign-in</a>
       </div><!--inicio-->
     </div><!--container-->      
   </body>

@@ -1,15 +1,11 @@
-<?
+<?php
 namespace services;
+require_once __DIR__ . '/../dao/UsuariosDAO.php';
+use dao\UsuariosDAO ;
 
-use dao\UsuariosDAO as UsuariosDAO ;
-
-class Alunos extends UsuariosDAO{
-   public  function listaTodos(){
-        return parent::listarTodos();
-    }
-
+class Usuarios extends UsuariosDAO{
     public function logar($email,$senha){
-        $arrsql=parent::verificarSenha($email,$senha);
+        $arrsql= $this-> verificarSenha($email,$senha);
         if($arrsql[0]['qtd']==1){
             //regra de sessao;
             echo "logado";
@@ -20,3 +16,4 @@ class Alunos extends UsuariosDAO{
         }
     }
 }
+?>
